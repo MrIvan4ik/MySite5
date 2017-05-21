@@ -1,0 +1,143 @@
+$blue: #4acaff
+@font-face
+  font-family: "Gotham Rounded"
+  src: url(../font/GR-Reg.otf)
+
+@font-face
+  font-family: "Gotham Rounded-Bold"
+  src: url(../font/GR-Bold.ttf)
+
+@mixin flex($dir, $jus, $alg)
+  display: flex
+  flex-direction: $dir
+  justify-content: $jus
+  align-items: $alg
+
+\::-webkit-scrollbar
+  width: 10px
+
+\::-webkit-scrollbar-thumb
+  background-color: $blue
+
+
+body, div, h1, h2, h3, h4, h5, h6, p, ul, li
+  margin: 0
+  padding: 0
+
+a
+  text-decoration: none
+  transition: 0.5s
+  &:hover
+    transition: 0.5s
+    color: $blue
+
+.header-fix
+  width: auto
+  height: 853px
+  background-image: url(../img/bgr.png)
+  background-size: cover
+
+.header
+  max-width: 960px
+  height: 489px
+  margin: auto
+  padding-top: 84px
+
+.header-navigation
+  @include flex(row, space-between, center)
+  max-width: 942px
+  height: 48px
+  margin: auto
+
+.logo
+  width: 133px
+  height: 44px
+
+.logo-text
+  width: 133px
+  height: 29px
+  color: #ffffff
+  font-family: "Gotham Rounded"
+  font-size: 31px
+  line-height: 19px
+  font-weight: 300
+
+.logo-text > strong
+  font-family: "Gotham Rounded-Bold"
+  font-weight: 500
+
+.logo-text_aftr
+  color: #ffffff
+  font-family: "Gotham Rounded"
+  font-size: 12px
+  font-weight: 300
+  line-height: 19px
+  letter-spacing: 9px
+
+.nav
+  @include flex(row, space-between, baseline)
+  width: 526px
+  height: 11px
+  list-style: none
+
+.nav-item_link
+  color: #ffffff
+  font-family: "Gotham Rounded-Bold"
+  font-size: 14px
+  font-weight: 500
+  line-height: 25px
+  text-transform: uppercase
+
+.nav-active
+  border-top: 4px solid $blue
+  padding-top: 2px
+
+.search
+  @include flex(column, space-between, flex-start)
+  max-width: 960px
+  height: 211px
+  margin: auto
+  margin-top: 230px
+
+.search-text
+  color: #ffffff
+  font-family: "Gotham Rounded"
+  font-size: 55px
+  font-weight: 300
+  font-style: italic
+
+.header-search-input
+  @include flex(row, space-between, baseline)
+  max-width: 960px
+  height: 54px
+
+.header-search-input__email
+  padding: 0px 20px
+  border: 0
+  width: 737px
+  height: 50px
+  border-radius: 2px 1px 1px 2px
+  background-color: #ffffff
+  border-bottom: 4px solid #e2e2e2
+  color: black
+  font-family: "Gotham Rounded-Bold"
+  font-size: 18px
+  font-weight: 300
+  margin-right: 83px
+
+.header-search-input__email::-webkit-input-placeholder
+  padding: 18px 20px
+  color: #c7c7c7
+  font-family: "Gotham Rounded"
+  font-size: 18px
+  font-weight: 300
+  font-style: italic
+
+.header-search-input__sumbit
+  margin: auto
+  width: 140px
+  height: 54px
+  border: 0
+  border-radius: 1px
+  border-bottom: 4px solid #3baedd
+  background-color: #4acaff

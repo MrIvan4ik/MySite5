@@ -1,0 +1,32 @@
+//output:index.html, pretty:true
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title twobytes
+    link(rel='stylesheet', href='font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='style/style.css')
+  body
+    header
+      div.header-fix
+        div.header
+          //- Да, я згаю что можно сделать меньше блоков, но я не хочу добавлять margin
+          div.header-navigation
+            div.logo
+              h1.logo-text
+                | two
+                strong bytes
+              p.logo-text_aftr consulting
+            ul.nav
+                a.nav-item_link.nav-active(href="#") Home
+                a.nav-item_link(href="#") About us
+                a.nav-item_link(href="#") jobs
+                a.nav-item_link(href="#") Client
+                a.nav-item_link(href="#") EMPLOYERS
+                a.nav-item_link(href="#") Contact us
+          div.search
+            //- Решаю, что тут буду использовать margin т.к. flex сжимает блоки
+            h1.search-text I’m looking for..
+            form.header-search-input
+              input.header-search-input__email(name='search', required='', value='', placeholder='Enter a Job Description')
+              input.header-search-input__sumbit(type='submit', value='Search')
