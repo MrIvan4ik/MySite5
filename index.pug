@@ -29,4 +29,15 @@ html
             h1.search-text I’m looking for..
             form.header-search-input
               input.header-search-input__email(name='search', required='', value='', placeholder='Enter a Job Description')
-              input.header-search-input__sumbit(type='submit', value='Search')
+              button.header-search-input__sumbit Search
+            form.header-search-select
+              input.header-check-box#ch1(type='checkbox')
+              label.header-check-box__text(for="ch1") Full Time
+              input.header-check-box#ch2(type='checkbox')
+              label.header-check-box__text(for="ch2") Part Time / Casual / Freelance
+              div.select-style
+                select.header-selector
+                  option.header-selector__option Select your Location
+                  option.header-selector__option Somethink
+                  option.header-selector__option SomeTks
+             
