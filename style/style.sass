@@ -147,6 +147,10 @@ a
   font-weight: 300
   font-style: italic
   line-height: 25px
+  transition: 0.5s
+  &:hover
+    transition: 0.5s
+    background-color: #3baedd
   &::before
     content: "\f002"
     font-family: "FontAwesome"
@@ -223,7 +227,6 @@ input
   font-style: normal
   line-height: 25px
 
-
 .select-style
   border: 1px solid #ccc
   width: 247px
@@ -240,7 +243,114 @@ input
     -webkit-appearance: none
     &:focus
       outline: none
+
 .separator
   width: auto
   height: 7px
   background-image: url(../img/separator.png)
+
+.find-more-fix
+  width: auto
+  height: 602px
+  background-color: #f5f5f5
+
+.find-more
+  @include flex(column, space-between, center)
+  max-width: 710px
+  height: 382px
+  margin: auto
+  padding-top: 107px
+
+.find-more__leaders-in_text
+  color: #585858
+  font-family: "Gotham Rounded"
+  font-size: 30px
+  font-weight: 300
+  font-style: italic
+
+.find-more__create-rec_text
+  color: #585858
+  font-family: "Gotham Rounded"
+  font-size: 45px
+  font-weight: 300
+
+.find-more__separator
+  width: 138px
+  height: 5px
+  border-radius: 0
+  background-color: #4acaff
+
+.find-more__inf_text
+  color: #585858
+  font-family: "Gotham Rounded"
+  font-size: 18px
+  font-weight: 300
+  text-align: center
+
+.find-more__find_button
+  @include flex(row, center,center)
+  width: 284px
+  height: 64px
+  border-radius: 4px
+  border: 2px solid #4acaff
+  background-color: rgba(56, 56, 56, 0)
+  color: #4acaff
+  font-family: "Gotham Rounded"
+  font-size: 15px
+  font-weight: 500
+  text-transform: uppercase
+  transition: 0.5s
+  &:hover
+    transition: 0.5s
+    color: #3baedd
+    border: 2px solid #3baedd
+
+.subscribe-fix
+  @include flex(column, center,center)
+  width: auto
+  height: 450px
+  background-color: #131c25
+
+.subscribe__text_bef
+  color: #ffffff
+  font-family: "Gotham Rounded"
+  font-size: 18px
+  font-weight: 300
+  margin-bottom: 34px
+
+.subscribe__input
+  @include flex(row, space-around, center)
+  width: 365px
+  height: 55px
+  border-radius: 4px 5px 5px 4px
+  border: 2px solid #4acaff
+  background-color: rgba(255, 255, 255, 0)
+
+.subscribe__search
+  width: 260px
+  border: 0
+  background-color: rgba(0, 0, 0, 0)
+  font-family: "Gotham Rounded-Bold"
+  font-size: 14px
+  font-weight: 300
+  font-style: normal
+  line-height: 25px
+  color: #ffffff
+
+::-webkit-input-placeholder
+  font-family: "Gotham Rounded"
+  font-size: 14px
+  font-weight: 300
+  font-style: italic
+  line-height: 25px
+  color: #ffffff
+
+.subscribe__sumbit
+    background-color: rgba(255,255,255,0)
+    border: 0
+    &::before
+      background-color: rgba(255,255,255,0)
+      font-family: "FontAwesome"
+      content: "\f0e0"
+      color: #ffffff
+      font-size: 15px
