@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>twobytes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, User-scalable=no">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
     <header>
+      <script type="text/javascript" src="js/js.js"> </script>
       <div class="header-fix">
         <div class="header">
           <div class="header-navigation">
@@ -15,7 +17,23 @@
               <h1 class="logo-text">two<strong>bytes</strong></h1>
               <p class="logo-text_aftr">consulting</p>
             </div>
-            <ul class="nav"><a href="#" class="nav-item_link nav-active">Home</a><a href="#" class="nav-item_link">About us</a><a href="#" class="nav-item_link">jobs</a><a href="#" class="nav-item_link">Client</a><a href="#" class="nav-item_link">EMPLOYERS</a><a href="#" class="nav-item_link">Contact us</a></ul>
+            <ul class="navigation_pc"><a href="#" class="nav-item_link nav-active">Home</a><a href="#" class="nav-item_link">About us</a><a href="#" class="nav-item_link">jobs</a><a href="#" class="nav-item_link">Client</a><a href="#" class="nav-item_link">EMPLOYERS</a><a href="#" class="nav-item_link">Contact us</a></ul>
+            <div class="navigation_mobile">
+              <div class="container">
+                <div onclick="wrapperClick()" id="wrapper" class="wrapper">
+                  <div class="visible">
+                    <ul class="hamburger">
+                      <li class="first"></li>
+                      <li class="second"></li>
+                      <li class="third"></li>
+                    </ul>
+                  </div>
+                  <div class="hidden">
+                    <ul class="nav_mobile"><a href="#" class="nav-item_link nav-active">Home</a><a href="#" class="nav-item_link">About us</a><a href="#" class="nav-item_link">jobs</a><a href="#" class="nav-item_link">Client</a><a href="#" class="nav-item_link">EMPLOYERS</a><a href="#" class="nav-item_link">Contact us</a></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="search">
             <h1 class="search-text">I’m looking for..</h1>

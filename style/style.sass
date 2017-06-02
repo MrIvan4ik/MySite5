@@ -74,7 +74,7 @@ a
   line-height: 19px
   letter-spacing: 9px
 
-.nav
+.navigation_pc
   @include flex(row, space-between, baseline)
   width: 526px
   height: 11px
@@ -105,6 +105,7 @@ a
   font-size: 55px
   font-weight: 300
   font-style: italic
+  text-align: center
 
 .header-search-input
   @include flex(row, space-between, baseline)
@@ -159,8 +160,11 @@ a
 
 .header-search-select
   @include flex(row, baseline,center )
-  width: 736px
+  max-width: 736px
   height: 37px
+  justify-content: center
+  flex-wrap: wrap
+      height: 90px
 
 .header-check-box
   width: 15px
@@ -273,6 +277,7 @@ input
   font-family: "Gotham Rounded"
   font-size: 45px
   font-weight: 300
+  text-align: center
 
 .find-more__separator
   width: 138px
@@ -317,6 +322,7 @@ input
   font-size: 18px
   font-weight: 300
   margin-bottom: 34px
+  text-align: center
 
 .subscribe__input
   @include flex(row, space-around, center)
@@ -387,6 +393,7 @@ input
   font-size: 14px
   color: #a6a5a5
   font-weight: 300
+  text-align: center
 
 
 .footer-copyright_bold
@@ -405,3 +412,138 @@ input
   height: 20px
   margin: auto
   margin-right: 0
+
+.navigation_mobile
+  display: none
+  margin: auto
+  margin-right: 72px
+
+.nav_mobile
+  @include flex(column, space-between, baseline)
+  width: 100px
+  position: relative
+  top: 35px
+
+body
+  font-family: sans-serif
+  background: #333
+  color: #fff
+
+.wrapper
+  margin-top: 14px
+  width: 36px
+  height: 36px
+  cursor: pointer
+  position: relative
+  -moz-transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+  -o-transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+  -webkit-transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+  transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+  border: 0
+  background-color: rgba(0, 0, 0, 0)
+  &:focus
+    outline: 0
+
+ul
+  list-style: none
+  margin: 0
+  padding: 0
+
+.hamburger
+  margin: 0
+  padding: 6px 6px 7px 6px
+  position: relative
+  -moz-transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+  -o-transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+  -webkit-transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+  transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+  li
+    width: 24px
+    height: 4px
+    background: #fff
+    margin: 2px 0 0
+    padding: 0
+    -moz-transform: translate3d(0, 0, 0)
+    -ms-transform: translate3d(0, 0, 0)
+    -webkit-transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0)
+    -moz-transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+    -o-transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+    -webkit-transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+    transition: all 133ms cubic-bezier(0.5, 0, 0, 1)
+
+.hidden
+  position: relative
+  opacity: 0
+  -moz-transition: all 333ms cubic-bezier(0.5, 0, 0, 1)
+  -o-transition: all 333ms cubic-bezier(0.5, 0, 0, 1)
+  -webkit-transition: all 333ms cubic-bezier(0.5, 0, 0, 1)
+  transition: all 333ms cubic-bezier(0.5, 0, 0, 1)
+
+.box
+  width: 36px
+  height: 30px
+  background: #464646
+  -moz-transition: all 533ms cubic-bezier(0.5, 0, 0, 1)
+  -o-transition: all 533ms cubic-bezier(0.5, 0, 0, 1)
+  -webkit-transition: all 533ms cubic-bezier(0.5, 0, 0, 1)
+  transition: all 533ms cubic-bezier(0.5, 0, 0, 1)
+
+.checked
+  background: #464646
+  .hidden
+    opacity: 1
+    -moz-transform: translateY(5px)
+    -ms-transform: translateY(5px)
+    -webkit-transform: translateY(5px)
+    transform: translateY(5px)
+  .box:last-child
+    -moz-transform: translateY(5px)
+    -ms-transform: translateY(5px)
+    -webkit-transform: translateY(5px)
+    transform: translateY(5px)
+    // Лул
+
+@media (max-width:960px)
+  .header-search-input
+    @include flex(column, space-between, center)
+    margin: auto
+
+  .search
+    height: 330px
+    align-items: center
+
+  .header-search-input
+    height: 135px
+    max-width: 700px
+
+  .header-search-input__email
+    margin: 0
+    width: 638px
+
+  .header-search-select
+    justify-content: center
+    flex-wrap: wrap
+    height: 90px
+
+@media (max-width:700px)
+  .navigation_pc
+    display: none
+  .navigation_mobile
+    display: block
+  .logo
+    margin: auto
+  .header-search-input__email
+    width: 520px
+
+@media (max-width:560px)
+  .header-search-input__email
+    width: 324px
+    text-align: center
+@media (max-width:400px)
+  .footer-social
+    display: none
+  .header-search-input__email
+    width: 253px
+  .subscribe__input
+    width: 268px
