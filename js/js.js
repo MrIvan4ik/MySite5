@@ -1,5 +1,7 @@
-var checked = false;
-
+window.onload = function () {
+  document.getElementById("body").className = ""
+  document.getElementById("preloader").className = "preloader-none"
+}
 function wrapperClick() {
   var wrapper = document.getElementById("wrapper");
   if (checked == false) {

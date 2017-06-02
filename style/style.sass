@@ -1,4 +1,25 @@
+@mixin flex($dir, $jus, $alg)
+  display: flex
+  flex-direction: $dir
+  justify-content: $jus
+  align-items: $alg
+
 $blue: #4acaff
+
+body
+  position: initial
+.preloader
+  @include flex(column, center, center)
+  width: 100%
+  height: 100%
+  background-color: $blue
+  z-index: 99
+  position: fixed
+  transition: 0.5s
+
+.preloader-none
+  display: none
+
 @font-face
   font-family: "Gotham Rounded"
   src: url(../font/GR-Reg.otf)
@@ -6,12 +27,6 @@ $blue: #4acaff
 @font-face
   font-family: "Gotham Rounded-Bold"
   src: url(../font/GR-Bold.ttf)
-
-@mixin flex($dir, $jus, $alg)
-  display: flex
-  flex-direction: $dir
-  justify-content: $jus
-  align-items: $alg
 
 \::-webkit-scrollbar
   width: 10px
@@ -342,6 +357,7 @@ input
   font-style: normal
   line-height: 25px
   color: #ffffff
+  text-align: center
 
 ::-webkit-input-placeholder
   font-family: "Gotham Rounded"
@@ -502,7 +518,6 @@ ul
     -ms-transform: translateY(5px)
     -webkit-transform: translateY(5px)
     transform: translateY(5px)
-    // Лул
 
 @media (max-width:960px)
   .header-search-input
@@ -529,10 +544,13 @@ ul
 @media (max-width:700px)
   .navigation_pc
     display: none
+
   .navigation_mobile
     display: block
+
   .logo
     margin: auto
+
   .header-search-input__email
     width: 520px
 
@@ -540,10 +558,13 @@ ul
   .header-search-input__email
     width: 324px
     text-align: center
+
 @media (max-width:400px)
   .footer-social
     display: none
+
   .header-search-input__email
     width: 253px
+
   .subscribe__input
     width: 268px

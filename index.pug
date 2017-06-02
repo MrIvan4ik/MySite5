@@ -7,7 +7,13 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1, User-scalable=no')
     link(rel='stylesheet', href='font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href='style/style.css')
-  body
+  body.preloader(id="body")
+    div.preloader(id="preloader")
+      div.logo
+        h1.logo-text
+          | two
+          strong bytes
+        p.logo-text_aftr consulting
     header
       script(type='text/javascript', src='js/js.js') 
       div.header-fix
@@ -42,10 +48,6 @@ html
                       a.nav-item_link(href="#") Client
                       a.nav-item_link(href="#") EMPLOYERS
                       a.nav-item_link(href="#") Contact us
-
-
-
-
           div.search
             //- Решаю, что тут буду использовать margin т.к. flex сжимает блоки
             h1.search-text I’m looking for..
